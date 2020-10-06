@@ -3,6 +3,9 @@ package br.edu.unifacisa.p2.logica;
 import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.regex.Matcher;
+
+import java.util.regex.*;  
 
 public class ExerciciosDeLogica {
 	public static int somaArray(int[] numeros) {
@@ -89,7 +92,18 @@ public class ExerciciosDeLogica {
 	}
 
 	public static boolean validaCEP(String cep) {
-		return false;
+		String padrao = "\\d{5}[-]\\d{2}";
+
+		Pattern p = Pattern.compile(padrao);
+
+		Matcher m2 = p.matcher(cep);
+
+		if (m2.find()) {
+			return true;
+		} else {
+			return false;
+		}
+
 	}
 
 	public static boolean isCPF(String CPF) {

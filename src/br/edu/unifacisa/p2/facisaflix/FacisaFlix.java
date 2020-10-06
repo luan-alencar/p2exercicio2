@@ -32,7 +32,6 @@ public class FacisaFlix {
 	public List<Serie> getSeriesPorEstilo(int estilo) {
 		List<Serie> estilos = new ArrayList<>();
 		for (Serie s : series) {
-
 			if (s.getClassificacao() == estilo) {
 
 			}
@@ -43,7 +42,7 @@ public class FacisaFlix {
 	public List<Serie> getSeriesPorClassificacao(int classificacao) {
 		List<Serie> serieClassificacao = new ArrayList<>();
 		for (Serie s : series) {
-			if (s.getClassificacao() == classificacao) {
+			if (series.contains(s.getClassificacao())) {
 				serieClassificacao.add(s);
 			}
 		}
@@ -51,10 +50,16 @@ public class FacisaFlix {
 	}
 
 	public List<Serie> getSeriesQueViu(Usuario usuario) {
+		List<Serie> serieQueViu = new ArrayList<Serie>();
+		for (Usuario u : usuarios) {
+			for (Visualizacao v : u.getVisualizacoes()) {
+			}
+		}
 		return null;
 	}
 
 	public List<Serie> getSeriesEmComum(Usuario u1, Usuario u2) {
+
 		return null;
 	}
 
@@ -81,6 +86,8 @@ public class FacisaFlix {
 	}
 
 	public int getQuantidadeTotalDeMinutos() {
+		int totalDeMInutos = 0;
+
 		return 0;
 	}
 }
