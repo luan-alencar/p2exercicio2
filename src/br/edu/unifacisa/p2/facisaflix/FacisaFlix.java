@@ -87,7 +87,13 @@ public class FacisaFlix {
 
 	public int getQuantidadeTotalDeMinutos() {
 		int totalDeMInutos = 0;
-
-		return 0;
+		for (Serie serie : series) {
+			for (Temporada t : serie.getTemporadas()) {
+				for (Episodio e : t.getEpisodios()) {
+					totalDeMInutos += e.getDuracao();
+				}
+			}
+		}
+		return totalDeMInutos;
 	}
 }
