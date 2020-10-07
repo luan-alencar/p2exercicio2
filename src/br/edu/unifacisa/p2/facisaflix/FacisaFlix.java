@@ -51,14 +51,14 @@ public class FacisaFlix {
 
 	public List<Serie> getSeriesQueViu(Usuario usuario) {
 		List<Serie> serieQueViu = new ArrayList<Serie>();
-		for (Usuario u : usuarios) {
-			for (Visualizacao v : u.getVisualizacoes()) {
-			}
+		for (Serie serie : series) {
+
 		}
 		return null;
 	}
 
 	public List<Serie> getSeriesEmComum(Usuario u1, Usuario u2) {
+		List<Serie> serieEmComum = new ArrayList<>();
 
 		return null;
 	}
