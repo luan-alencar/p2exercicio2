@@ -50,17 +50,21 @@ public class FacisaFlix {
 	}
 
 	public List<Serie> getSeriesQueViu(Usuario usuario) {
+		// primeiro pensei no seguinte:
 		List<Serie> serieQueViu = new ArrayList<Serie>();
 		for (Serie serie : series) {
-
+			
+			if (series.contains(serie)) {
+				serieQueViu.add(serie);
+			}
 		}
-		return null;
+		return serieQueViu;
 	}
 
 	public List<Serie> getSeriesEmComum(Usuario u1, Usuario u2) {
 		List<Serie> serieEmComum = new ArrayList<>();
-
-		return null;
+		
+		return serieEmComum;
 	}
 
 	public int getQuantidadeDeSeries() {
