@@ -42,7 +42,15 @@ public class FacisaFlix {
 	public List<Serie> getSeriesPorClassificacao(int classificacao) {
 		List<Serie> serieClassificacao = new ArrayList<>();
 		for (Serie s : series) {
-			if (series.contains(s.getClassificacao())) {
+			if (s.getClassificacao() == Classificacao.LIVRE) {
+				serieClassificacao.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZ_ANOS) {
+				serieClassificacao.add(s);
+			} else if (s.getClassificacao() == Classificacao.QUATORZE_ANOS) {
+				serieClassificacao.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZOITO_ANOS) {
+				serieClassificacao.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZESSEIS_ANOS) {
 				serieClassificacao.add(s);
 			}
 		}
