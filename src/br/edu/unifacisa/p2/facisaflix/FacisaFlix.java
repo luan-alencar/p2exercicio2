@@ -50,11 +50,14 @@ public class FacisaFlix {
 	}
 
 	public List<Serie> getSeriesQueViu(Usuario usuario) {
-		// primeiro pensei no seguinte:
+		// primeiro pensei no seguinte: criei um array para armazenar as series q o
+		// usuario viu
 		List<Serie> serieQueViu = new ArrayList<Serie>();
+		// dps para cada serie em series
 		for (Serie serie : series) {
-			
+			// se tal serie contiver a serie especifica
 			if (series.contains(serie)) {
+				// adicione ao meu array
 				serieQueViu.add(serie);
 			}
 		}
@@ -63,7 +66,7 @@ public class FacisaFlix {
 
 	public List<Serie> getSeriesEmComum(Usuario u1, Usuario u2) {
 		List<Serie> serieEmComum = new ArrayList<>();
-		
+
 		return serieEmComum;
 	}
 
