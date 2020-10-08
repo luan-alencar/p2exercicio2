@@ -32,10 +32,19 @@ public class FacisaFlix {
 	public List<Serie> getSeriesPorEstilo(int estilo) {
 		List<Serie> estilos = new ArrayList<>();
 		for (Serie s : series) {
-			if (s.getClassificacao() == estilo) {
-
+			if (s.getClassificacao() == Classificacao.LIVRE) {
+				estilos.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZ_ANOS) {
+				estilos.add(s);
+			} else if (s.getClassificacao() == Classificacao.QUATORZE_ANOS) {
+				estilos.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZOITO_ANOS) {
+				estilos.add(s);
+			} else if (s.getClassificacao() == Classificacao.DEZESSEIS_ANOS) {
+				estilos.add(s);
 			}
 		}
+
 		return estilos;
 	}
 
@@ -74,7 +83,11 @@ public class FacisaFlix {
 
 	public List<Serie> getSeriesEmComum(Usuario u1, Usuario u2) {
 		List<Serie> serieEmComum = new ArrayList<>();
-
+		for (Serie serie : series) {
+			if (series.contains(serie)) {
+				serieEmComum.add(serie);
+			}
+		}
 		return serieEmComum;
 	}
 
