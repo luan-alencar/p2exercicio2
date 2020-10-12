@@ -13,7 +13,7 @@ class ExerciciosDeLogicaTest {
 
 	@Test
 	void testSomaArray() {
-		int[] numeros = new int[] { 2, 3, 6, 7 };
+		Integer[] numeros = new Integer[] { 2, 3, 6, 7 };
 		assertEquals(18, ExerciciosDeLogica.somaArray(numeros));
 	}
 

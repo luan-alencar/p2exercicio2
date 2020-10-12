@@ -1,18 +1,19 @@
 package br.edu.unifacisa.p2.logica;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 
 import java.util.regex.*;
 
 public class ExerciciosDeLogica {
-	public static int somaArray(int[] numeros) {
-		int soma = 0;
-		for (int i = 0; i < numeros.length; i++) {
-			soma += numeros[i];
-		}
+	public static Integer somaArray(Integer[] numeros) {
+		List<Integer> valores = Arrays.asList(numeros);
+		Integer soma = valores.stream()
+				.reduce(0, (a, b) -> a + b);
 		return soma; // + 2; // kkkkkkkk
 	}
 
