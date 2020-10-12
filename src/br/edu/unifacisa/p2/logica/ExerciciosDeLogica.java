@@ -11,10 +11,13 @@ import java.util.regex.*;
 
 public class ExerciciosDeLogica {
 	public static Integer somaArray(Integer[] numeros) {
+		// criei uma lista Integer para receber o parametro
 		List<Integer> valores = Arrays.asList(numeros);
+		// instanciei uma variavel para somar os valores
 		Integer soma = valores.stream()
+				// reduce() e responsavel por somar cada elemento
 				.reduce(0, (a, b) -> a + b);
-		return soma; // + 2; // kkkkkkkk
+		return soma; // e no final retorne
 	}
 
 	public static int getMaior(int[] numeros) {
